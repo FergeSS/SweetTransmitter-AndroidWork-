@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:background="@drawable/about_us"/>
+
+    <ImageButton
+        android:id="@+id/slideMenuButtonBack"
+        android:layout_width="23dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.5" />
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="2dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_regular"
+    android:text="Welcome to our online bookstore!\n\nWe offer a wide selection of books for every taste and age. From classic literature to the latest bestsellers, we have something for everyone.\n\nOur store also provides fast and reliable delivery service. We deliver books all over the country in the shortest possible time. You can choose from several options: standard delivery, express delivery or same-day delivery.
+
+\n\nIf you are looking for a particular book or author, use our search tool. It is easy to use and will help you find what you need quickly.
+
+\n\nYou can pay for your order using any convenient payment method. We accept credit cards, bank transfers and cash on delivery.
+
+\n\nWhy choose us?
+* Wide selection of books;
+* Fast and reliable delivery;
+* Convenient payment methods;
+* Competitive prices.
+
+\n\nOrder now and get your books delivered right to your doorstep!" /></ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

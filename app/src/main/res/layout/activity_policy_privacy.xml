@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PolicyPrivacy">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:background="@drawable/privacy_policy"/>
+
+    <ImageButton
+        android:id="@+id/slideMenuButtonBack"
+        android:layout_width="23dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.5" />
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="2dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="15dp"
+            android:text="Introduction
+
+\n\nThis Privacy Policy (hereinafter referred to as the “Policy”) applies to all information that we collect about you when you use our Food Delivery App. We are committed to protecting your personal information and ensuring that it is used only for purposes that are consistent with this Policy.
+
+\n\nWhat Information Do We Collect?
+
+\n\nWhen you use our app, we may collect the following types of information:
+\nYour name, email address, and phone number;
+\nInformation about your orders, including the items you order, the time and date of your order, and your payment information;
+\nAny other information you provide us with when using our app or website.
+
+\n\nWe may also receive information about you from third parties, such as advertising networks or analytics providers.
+
+\n\nHow Do We Use Your Information?
+
+\n\nWe use your information to provide you with a better experience when using our app. For example, we use your name and email address to send you notifications about new features, promotions, and other important information. We also use your payment information to process your orders.
+
+\n\nWe do not sell or share your information with third parties for their own marketing purposes. However, we may share your information with our partners who provide services to us, such as payment processors or delivery drivers. These partners are required to protect your information in accordance with this Policy.
+
+\n\nYour Rights
+
+\n\nYou have the right to access, correct, delete, or restrict the use of your information at any time. You can exercise these rights by contacting us at [contact information].
+
+\n\nChanges to This Policy
+
+\n\nWe reserve the right to change this Policy at any time. If we make changes, we will post the updated version on our website. We encourage you to review this Policy regularly to stay informed about how we use and protect your information.
+
+\n\nContact Us
+
+\n\nIf you have any questions or concerns about this Policy, please contact us at [contact information]. "/></ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
