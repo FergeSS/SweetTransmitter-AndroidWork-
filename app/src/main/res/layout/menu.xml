@@ -19,7 +19,7 @@
         android:layout_width="23dp"
         android:layout_height="17dp"
         android:layout_marginStart="10dp"
-        android:background="@drawable/menu_icon"
+        android:background="@drawable/menu_selector"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"

@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -70,6 +71,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             holder.description.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    MainActivity.isBack = false;
+                    MainActivity.getDark().setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            return false;
+                        }
+                    });
 
                     ConstraintLayout card = MainActivity.getCard();
                     if (position == 0 && !isFav) {
@@ -100,6 +108,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                     back.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            MainActivity.isBack = true;
                             Handler hand = new Handler(Looper.getMainLooper());
 
                             Runnable runnable = new Runnable() {

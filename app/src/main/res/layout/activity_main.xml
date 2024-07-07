@@ -120,7 +120,7 @@
             android:layout_height="17dp"
             android:layout_marginTop="160dp"
             android:layout_marginEnd="70dp"
-            android:background="@drawable/menu_icon"
+            android:background="@drawable/slide_menu_selector"
             app:layout_constraintEnd_toEndOf="@+id/menuFrame"
             app:layout_constraintTop_toTopOf="@+id/menuFrame" />
 
@@ -139,7 +139,7 @@
                 android:id="@+id/slideMenuButtonHistory"
                 android:layout_width="181dp"
                 android:layout_height="35dp"
-                android:background="@drawable/history_of_orders_1" />
+                android:background="@drawable/history_selector" />
 
             <Space
                 android:layout_width="0dp"
@@ -150,7 +150,7 @@
                 android:id="@+id/slideMenuButtonPolicy"
                 android:layout_width="153dp"
                 android:layout_height="35dp"
-                android:background="@drawable/policy_1" />
+                android:background="@drawable/policy_selector" />
 
             <Space
                 android:layout_width="0dp"
@@ -161,7 +161,7 @@
                 android:id="@+id/slideMenuButtonRating"
                 android:layout_width="143dp"
                 android:layout_height="35dp"
-                android:background="@drawable/rating" />
+                android:background="@drawable/rating_selector" />
 
             <Space
                 android:layout_width="0dp"
@@ -172,7 +172,7 @@
                 android:id="@+id/slideMenuButtonAbout"
                 android:layout_width="114dp"
                 android:layout_height="35dp"
-                android:background="@drawable/about_us_1" />
+                android:background="@drawable/about_selector" />
 
             <Space
                 android:layout_width="0dp"
@@ -183,7 +183,7 @@
                 android:id="@+id/slideMenuButtonExit"
                 android:layout_width="64dp"
                 android:layout_height="35dp"
-                android:background="@drawable/exit" />
+                android:background="@drawable/exit_selector" />
 
 
         </LinearLayout>
@@ -201,14 +201,14 @@
                 android:layout_width="64dp"
                 android:layout_height="35dp"
                 android:visibility="invisible"
-                android:background="@drawable/exit" />
+                android:background="@drawable/exit_selector" />
             <ImageButton
                 android:id="@+id/dialogueStay"
                 android:layout_width="64dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="10dp"
                 android:visibility="invisible"
-                android:background="@drawable/stay"/>
+                android:background="@drawable/stay_selector"/>
         </LinearLayout>
 
 
@@ -266,7 +266,7 @@
             android:id="@+id/cardButtonClose"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/close"
+            android:background="@drawable/close_selector"
             app:layout_constraintEnd_toEndOf="@+id/frameCard"
             app:layout_constraintStart_toEndOf="@+id/imageProduct"
             app:layout_constraintTop_toTopOf="@+id/cardButtonFav"
@@ -315,7 +315,7 @@
             android:id="@+id/cardButtonAdd"
             android:layout_width="170dp"
             android:layout_height="40dp"
-            android:background="@drawable/button_add_to_bascket"
+            android:background="@drawable/basket_selector"
             app:layout_constraintBottom_toBottomOf="@+id/frameCard"
             app:layout_constraintStart_toStartOf="@+id/frameCard"
             android:layout_marginStart="20dp"
@@ -409,17 +409,24 @@
                 android:id="@+id/menuDeleteButtonYes"
                 android:layout_width="64dp"
                 android:layout_height="35dp"
-                android:background="@drawable/yes"/>
+                android:background="@drawable/yes_selector"/>
             <ImageButton
                 android:id="@+id/menuDeleteButtonNo"
                 android:layout_width="64dp"
                 android:layout_height="35dp"
-                android:background="@drawable/no"/>
+                android:background="@drawable/no_selector"/>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+    <ImageView
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/darkening"

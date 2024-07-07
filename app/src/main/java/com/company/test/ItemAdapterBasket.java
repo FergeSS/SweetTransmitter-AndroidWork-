@@ -57,10 +57,40 @@ public class ItemAdapterBasket extends RecyclerView.Adapter<ItemAdapterBasket.Vi
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                MainActivity.isBack = false;
+                holder.menu.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        return;
+                    }
+                });
                 holder.menu.setAlpha(1);
                 holder.menu.setZ(2000);
                 holder.dark.setAlpha(0.7f);
                 holder.dark.setZ(999);
+
+                holder.dark.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        return false;
+                    }
+                });
+                holder.dark.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        MainActivity.isBack = true;
+                        holder.menu.setAlpha(0.0f);
+                        holder.menu.setZ(-1);
+                        holder.dark.setAlpha(0.0f);
+                        holder.dark.setZ(-1);
+                        holder.dark.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                return;
+                            }
+                        });
+                    }
+                });
 
 
                 holder.menu.findViewById(R.id.menuDeleteButtonYes).setOnClickListener(new View.OnClickListener() {
@@ -94,6 +124,7 @@ public class ItemAdapterBasket extends RecyclerView.Adapter<ItemAdapterBasket.Vi
                                 notifyItemRemoved(position);
                             });
                         }
+                        MainActivity.isBack = true;
                         holder.menu.setAlpha(0.0f);
                         holder.menu.setZ(-1);
                         holder.dark.setAlpha(0.0f);
@@ -107,6 +138,7 @@ public class ItemAdapterBasket extends RecyclerView.Adapter<ItemAdapterBasket.Vi
                 holder.menu.findViewById(R.id.menuDeleteButtonNo).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        MainActivity.isBack = true;
                         holder.menu.setAlpha(0.0f);
                         holder.menu.setZ(-1);
                         holder.dark.setAlpha(0.0f);

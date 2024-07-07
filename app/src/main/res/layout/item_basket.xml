@@ -62,7 +62,7 @@
         android:layout_width="22dp"
         android:layout_height="21dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/delete"
+        android:background="@drawable/delete_selector"
 
         app:layout_constraintEnd_toEndOf="@+id/itemPrice"
         app:layout_constraintStart_toStartOf="@+id/itemPrice"

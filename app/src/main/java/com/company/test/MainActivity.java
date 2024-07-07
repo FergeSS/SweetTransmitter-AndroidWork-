@@ -27,6 +27,11 @@ import android.widget.Toast;
 
 import androidx.core.splashscreen.SplashScreen;
 
+import com.google.android.play.core.review.ReviewInfo;
+import com.google.android.play.core.review.ReviewManager;
+import com.google.android.play.core.review.ReviewManagerFactory;
+import com.google.android.play.core.tasks.Task;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -36,6 +41,7 @@ import java.util.ListIterator;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    static boolean isBack = true;
     String favsInfo;
     ImageButton buttonMenu;
     ImageButton buttonBasket;
@@ -66,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView recyclerViewFav;
     private ItemAdapter itemAdapter;
     private ItemAdapterBasket itemAdapterBasket;
+    ImageView slider;
     ViewGroup parentLayout;
     View menu;
     View basket;
@@ -135,6 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialogueStay = findViewById(R.id.dialogueStay);
         card = findViewById(R.id.layoutCard);
         counterBasket = findViewById(R.id.counterBasket);
+        slider = findViewById(R.id.slider);
 
         buttonMenu.setOnClickListener(this);
         buttonBasket.setOnClickListener(this);
@@ -166,6 +174,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         counterBasket.setText(itemsBasket.size()+"");
         itemsBasket.clear();
+
+        slider.setOnTouchListener(new OnSwipeTouchListener(this) {
+            public void onSwipeLeft() {
+                if (idCurrentView == 1) {
+                    setCupcakes();
+                }
+                else if (idCurrentView == 2) {
+                    setMuffins();
+
+                }
+                else if (idCurrentView == 3) {
+                    setCheesecake();
+                }
+            }
+            public void onSwipeRight() {
+                if (idCurrentView == 1) {
+                    setSlideMenu();
+
+                }
+                else if (idCurrentView == 2) {
+                    setCakes();
+                }
+                else if (idCurrentView == 3) {
+                    setCupcakes();
+                }
+                else if (idCurrentView == 4) {
+                    setMuffins();
+                }
+            }
+
+        });
 
 
         dark.setOnTouchListener(new OnSwipeTouchListener(this) {
@@ -216,6 +255,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
     private void setSlideMenu() {
+        dark.setOnTouchListener(new OnSwipeTouchListener(this) {
+            public void onSwipeLeft() {
+                destroySlideMenu();
+            }
+        });
         idCurrentView = 0;
         dark.setZ(999);
         dark.animate().alpha(0.7f).setDuration(500);
@@ -432,6 +476,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 findViewById(R.id.buttonCheckout).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        isBack = false;
+                        dark.setOnTouchListener(new View.OnTouchListener() {
+                            @Override
+                            public boolean onTouch(View v, MotionEvent event) {
+                                return false;
+                            }
+                        });
                         String totalString = total.getText().toString();
 
                         if (totalString.charAt(totalString.length() - 1) == '0' && totalString.charAt(totalString.length() - 2) == ' ') { return; }
@@ -453,6 +504,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         layoutOrder.findViewById(R.id.cardButtonClose).setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                MainActivity.isBack = true;
                                 layoutOrder.animate().translationY(layoutOrder.getHeight()).setDuration(300);
                                 layoutOrder.setZ(-1);
                                 dark2.animate().alpha(0.0f).setDuration(300);
@@ -487,8 +539,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 // Установите отметку на нажатую радиокнопку
                                 radioButton.setChecked(true);
 
-                                // Показать сообщение с выбранной опцией
-                                Toast.makeText(MainActivity.this, "Selected: " + radioButton.getText(), Toast.LENGTH_SHORT).show();
                             });
                         }
 
@@ -514,6 +564,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 layoutOrderThx.findViewById(R.id.cardMenu).setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
+                                        isBack = true;
                                         layoutOrderThx.animate().translationY(layoutOrder.getHeight()).setDuration(300);
                                         layoutOrderThx.setZ(-1);
                                         dark2.animate().alpha(0.0f).setDuration(300);
@@ -627,7 +678,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        else if (view.getId() == R.id.slideMenuButtonRating) {
            dialogueExit.setVisibility(View.INVISIBLE);
            dialogueStay.setVisibility(View.INVISIBLE);
-           //to do
+          
        }
        else if (view.getId() == R.id.slideMenuButtonExit) {
            dialogueExit.setVisibility(View.VISIBLE);
@@ -754,7 +805,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onBackPressed() {
         if (idCurrentView == 0) {
             destroySlideMenu();
-        } else {
+        } else if(isBack) {
             finish();
         }
 
