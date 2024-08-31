@@ -1,0 +1,327 @@
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/layoutOrder"
+    android:layout_width="390dp"
+    android:layout_height="850dp"
+   app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/frameCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/cardButtonClose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/close_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="114dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="700dp"
+        android:background="@drawable/delivery_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/frameCard" />
+
+    <ScrollView
+        android:id="@id/layoutOrderForScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32999998"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <EditText
+                android:id="@+id/adress"
+                android:layout_width="360dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/big_edit"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Adress"
+                android:paddingStart="20dp"
+                android:paddingTop="17dp"
+                android:textColor="@color/orange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text=" Indicate the city, street and house number:"
+
+                android:textColor="@color/orange"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/adress"
+                app:layout_constraintStart_toStartOf="@+id/adress" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adress">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-12dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Apartment"
+                        android:textColor="@color/orange"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toTopOf="@+id/apartament" />
+
+                    <EditText
+                        android:id="@+id/apartament"
+                        android:layout_width="100dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/small_edit"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:hint="1"
+                        android:paddingStart="20dp"
+                        android:paddingTop="17dp"
+                        android:textColor="@color/orange" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-12dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Entrance"
+                        android:textColor="@color/orange"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toTopOf="@+id/entrance" />
+
+                    <EditText
+                        android:id="@+id/entrance"
+                        android:layout_width="100dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/small_edit"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:hint="1"
+                        android:paddingStart="20dp"
+                        android:paddingTop="17dp"
+                        android:textColor="@color/orange" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-12dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Floor"
+                        android:textColor="@color/orange"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toTopOf="@+id/floor" />
+
+                    <EditText
+                        android:id="@+id/floor"
+                        android:layout_width="100dp"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/small_edit"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:hint="1"
+                        android:paddingStart="20dp"
+                        android:paddingTop="17dp"
+                        android:textColor="@color/orange" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-12dp"
+                android:fontFamily="@font/montserrat_semibold"
+
+                android:text="Name"
+                android:textColor="@color/orange"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/name"
+                app:layout_constraintStart_toStartOf="@+id/name" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="360dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/big_edit"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Name"
+                android:paddingStart="20dp"
+                android:paddingTop="17dp"
+                android:textColor="@color/orange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Comments on the order"
+
+                android:textColor="@color/orange"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/comments"
+                app:layout_constraintStart_toStartOf="@+id/comments" />
+
+
+            <EditText
+                android:id="@+id/comments"
+                android:layout_width="360dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/big_edit"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Some comments"
+
+                android:paddingStart="20dp"
+                android:paddingTop="17dp"
+                android:textColor="@color/orange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="214dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutOrder"
+        app:layout_constraintStart_toStartOf="@+id/layoutOrder"
+        app:layout_constraintTop_toBottomOf="@+id/layoutOrderForScroll">
+
+        <RadioButton
+            android:id="@+id/cash"
+            android:layout_width="68dp"
+            android:layout_height="40dp"
+            android:background="@drawable/cash_selector"
+            android:button="@null"
+            android:textColorHint="@color/black" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/cardTransfer"
+            android:layout_width="131dp"
+            android:layout_height="40dp"
+            android:background="@drawable/transfer_selector"
+            android:button="@null"
+            android:textColorHint="@color/black" />
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/card"
+        android:layout_width="169dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/card_selector"
+        android:button="@null"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/layoutOrder"
+        app:layout_constraintStart_toStartOf="@+id/layoutOrder"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/cardTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Total: 0"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <ImageButton
+        android:id="@+id/cardContinue"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/continue_selector"
+        app:layout_constraintEnd_toEndOf="@+id/layoutOrder"
+        app:layout_constraintStart_toStartOf="@+id/layoutOrder"
+        app:layout_constraintTop_toBottomOf="@id/cardTotal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,157 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutCard"
+    android:layout_width="261dp"
+    android:layout_height="567dp"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/frameCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:background="@drawable/frame_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageProduct"
+        android:layout_width="167dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintTop_toTopOf="@+id/frameCard"
+        app:layout_constraintEnd_toEndOf="@+id/frameCard"
+        app:layout_constraintStart_toStartOf="@+id/frameCard" />
+
+    <ImageView
+        android:layout_width="261dp"
+        android:layout_height="127dp"
+        android:background="@drawable/lines"
+        app:layout_constraintStart_toStartOf="@+id/imageProduct"
+        app:layout_constraintEnd_toEndOf="@+id/imageProduct"
+        app:layout_constraintTop_toTopOf="@+id/imageProduct"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProduct"
+        />
+
+    <ImageButton
+        android:id="@+id/cardButtonFav"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintTop_toTopOf="@+id/imageProduct"
+        app:layout_constraintEnd_toStartOf="@+id/imageProduct"
+        android:background="@drawable/fav"
+        />
+
+    <ImageButton
+        android:id="@+id/cardButtonClose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/close_selector"
+        app:layout_constraintEnd_toEndOf="@+id/frameCard"
+        app:layout_constraintStart_toEndOf="@+id/imageProduct"
+        app:layout_constraintTop_toTopOf="@+id/cardButtonFav"
+        app:layout_constraintBottom_toBottomOf="@+id/cardButtonFav"/>
+    <TextView
+        android:id="@+id/cardTitle"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/frameCard"
+        app:layout_constraintEnd_toEndOf="@+id/frameCard"
+        app:layout_constraintTop_toBottomOf="@+id/imageProduct"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:id="@+id/cardTop"
+        android:layout_width="14dp"
+        android:layout_height="19dp"
+        android:background="@drawable/top"
+        app:layout_constraintEnd_toStartOf="@+id/cardTitle"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintTop_toTopOf="@+id/cardTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/cardTitle"
+        android:alpha="0"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@+id/frameCard"
+        app:layout_constraintEnd_toEndOf="@+id/frameCard"
+        app:layout_constraintTop_toBottomOf="@+id/cardTitle">
+        <TextView
+            android:id="@+id/cardDesc"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="20dp"
+            /></ScrollView>
+
+    <ImageButton
+        android:id="@+id/cardButtonAdd"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:background="@drawable/basket_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/frameCard"
+        app:layout_constraintStart_toStartOf="@+id/frameCard"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"/>
+    <ImageButton
+        android:id="@+id/cardButtonPlus"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/plus"
+        app:layout_constraintEnd_toStartOf="@+id/cardCount"
+        app:layout_constraintBottom_toBottomOf="@+id/cardButtonAdd"
+        app:layout_constraintTop_toTopOf="@+id/cardButtonAdd"
+        android:layout_marginEnd="20dp"
+        />
+    <ImageButton
+        android:id="@+id/cardButtonMinus"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/minus"
+        app:layout_constraintStart_toEndOf="@+id/cardCount"
+        app:layout_constraintBottom_toBottomOf="@+id/cardButtonAdd"
+        app:layout_constraintTop_toTopOf="@+id/cardButtonAdd"
+        android:layout_marginStart="20dp"
+        />
+    <TextView
+        android:id="@+id/cardCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/orange"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardButtonAdd"
+        app:layout_constraintTop_toTopOf="@+id/cardButtonAdd"
+        app:layout_constraintEnd_toEndOf="@+id/frameCard"
+        android:layout_marginEnd="52dp"
+        />
+    <ImageView
+        android:id="@+id/cardAddToCart"
+        android:layout_width="257dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardButtonAdd"
+        app:layout_constraintStart_toStartOf="@+id/frameCard"
+        app:layout_constraintEnd_toEndOf="@+id/frameCard"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/add"
+        android:alpha="0"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

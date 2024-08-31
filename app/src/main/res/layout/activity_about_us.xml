@@ -27,24 +27,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="110dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="2dp">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/montserrat_regular"
-    android:text="Welcome to our online bookstore!\n\nWe offer a wide selection of books for every taste and age. From classic literature to the latest bestsellers, we have something for everyone.\n\nOur store also provides fast and reliable delivery service. We deliver books all over the country in the shortest possible time. You can choose from several options: standard delivery, express delivery or same-day delivery.
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Welcome to our online store! We offer a wide selection of delicious cakes with home delivery. Our cakes are made from high-quality ingredients and come in different flavors and sizes, so everyone can find something to their liking.
 
-\n\nIf you are looking for a particular book or author, use our search tool. It is easy to use and will help you find what you need quickly.
+\n\nWe guarantee fast and reliable delivery anywhere in the city. Just choose the cakes you like, place an order and enjoy the taste!
 
-\n\nYou can pay for your order using any convenient payment method. We accept credit cards, bank transfers and cash on delivery.
+\n\nIn our store you will find:
 
-\n\nWhy choose us?
-* Wide selection of books;
-* Fast and reliable delivery;
-* Convenient payment methods;
-* Competitive prices.
-
-\n\nOrder now and get your books delivered right to your doorstep!" /></ScrollView>
+\n\nCakes with different fillings: chocolate, vanilla, strawberry, raspberry and others.
+\nDifferent sizes: small, medium and large.
+\nAffordable prices.
+\nDon't miss the opportunity to treat yourself and your loved ones to delicious and beautiful cakes!
+" /></ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

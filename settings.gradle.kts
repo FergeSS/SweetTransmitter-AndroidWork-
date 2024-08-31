@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Sweet Transmitter"
 include(":app")
- 

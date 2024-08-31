@@ -8,380 +8,124 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/backgroundMainLayout"
         android:layout_gravity="center">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/tab_1__1_" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:id="@+id/buttonMenu"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/menu_pressed" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        <ImageButton
-            android:id="@+id/buttonBasket"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-
-            android:background="@drawable/basket" />
-            <TextView
-                android:id="@+id/counterBasket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:fontFamily="@font/montserrat_regular"
-                android:textColor="@color/black"
-                android:textSize="8dp"
-                app:layout_constraintTop_toTopOf="@id/buttonBasket"
-                android:layout_marginTop="11.5dp"
-                android:layout_marginEnd="14.5dp"
-                app:layout_constraintEnd_toEndOf="@id/buttonBasket"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:id="@+id/buttonFav"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/fav" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/menuLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="-365dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
         <ImageView
-            android:id="@+id/menuFrame"
-            android:layout_width="365dp"
-            android:layout_height="844dp"
-
-            android:background="@drawable/frame"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageButton
-            android:id="@+id/slideMenuButtonMenu"
-            android:layout_width="23dp"
-            android:layout_height="17dp"
-            android:layout_marginTop="160dp"
-            android:layout_marginEnd="70dp"
-            android:background="@drawable/slide_menu_selector"
-            app:layout_constraintEnd_toEndOf="@+id/menuFrame"
-            app:layout_constraintTop_toTopOf="@+id/menuFrame" />
-
-        <LinearLayout
-            android:id="@+id/slideMenuLinear"
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
-            android:layout_height="295dp"
-            android:layout_marginTop="160dp"
-            android:layout_marginEnd="150dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="@+id/menuFrame"
-            app:layout_constraintTop_toTopOf="@+id/menuFrame">
-
-
-            <ImageButton
-                android:id="@+id/slideMenuButtonHistory"
-                android:layout_width="181dp"
-                android:layout_height="35dp"
-                android:background="@drawable/history_selector" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/slideMenuButtonPolicy"
-                android:layout_width="153dp"
-                android:layout_height="35dp"
-                android:background="@drawable/policy_selector" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/slideMenuButtonRating"
-                android:layout_width="143dp"
-                android:layout_height="35dp"
-                android:background="@drawable/rating_selector" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/slideMenuButtonAbout"
-                android:layout_width="114dp"
-                android:layout_height="35dp"
-                android:background="@drawable/about_selector" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/slideMenuButtonExit"
-                android:layout_width="64dp"
-                android:layout_height="35dp"
-                android:background="@drawable/exit_selector" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@+id/slideMenuLinear"
-            app:layout_constraintTop_toBottomOf="@+id/slideMenuLinear"
-            android:layout_marginTop="80dp"
-            android:layout_marginStart="100dp">
-
-            <ImageButton
-                android:id="@+id/dialogueExit"
-                android:layout_width="64dp"
-                android:layout_height="35dp"
-                android:visibility="invisible"
-                android:background="@drawable/exit_selector" />
-            <ImageButton
-                android:id="@+id/dialogueStay"
-                android:layout_width="64dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="10dp"
-                android:visibility="invisible"
-                android:background="@drawable/stay_selector"/>
-        </LinearLayout>
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutCard"
-        android:layout_width="390dp"
-        android:layout_height="850dp"
-        android:layout_marginBottom="-850dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/frameCard"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/frame_card"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:srcCompat="@drawable/tab_1__1_" />
 
-        <ImageView
-            android:id="@+id/imageProduct"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_marginBottom="480dp"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2">
 
-        <ImageView
-            android:layout_width="390dp"
-            android:layout_height="192dp"
-            android:background="@drawable/lines"
-            app:layout_constraintStart_toStartOf="@+id/imageProduct"
-            app:layout_constraintEnd_toEndOf="@+id/imageProduct"
-            app:layout_constraintTop_toTopOf="@+id/imageProduct"
-            app:layout_constraintBottom_toBottomOf="@+id/imageProduct"
-            />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-        <ImageButton
-            android:id="@+id/cardButtonFav"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintTop_toTopOf="@+id/imageProduct"
-            app:layout_constraintEnd_toStartOf="@+id/imageProduct"
-            android:background="@drawable/fav"
-            />
+            <ImageButton
+                android:id="@+id/buttonMenu"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/menu_pressed" />
 
-        <ImageButton
-            android:id="@+id/cardButtonClose"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@drawable/close_selector"
-            app:layout_constraintEnd_toEndOf="@+id/frameCard"
-            app:layout_constraintStart_toEndOf="@+id/imageProduct"
-            app:layout_constraintTop_toTopOf="@+id/cardButtonFav"
-            app:layout_constraintBottom_toBottomOf="@+id/cardButtonFav"/>
-        <TextView
-            android:id="@+id/cardTitle"
-            android:layout_width="wrap_content"
-            android:textAlignment="center"
-            android:layout_height="wrap_content"
-            android:textColor="@color/orange"
-            android:fontFamily="@font/montserrat_semibold"
-            android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="@+id/frameCard"
-            app:layout_constraintEnd_toEndOf="@+id/frameCard"
-            app:layout_constraintTop_toBottomOf="@+id/imageProduct"
-            android:layout_marginTop="10dp"/>
-        <ImageView
-            android:id="@+id/cardTop"
-            android:layout_width="14dp"
-            android:layout_height="19dp"
-            android:background="@drawable/top"
-            app:layout_constraintEnd_toStartOf="@+id/cardTitle"
-            android:layout_marginEnd="4dp"
-            app:layout_constraintTop_toTopOf="@+id/cardTitle"
-            app:layout_constraintBottom_toBottomOf="@+id/cardTitle"
-            android:alpha="0"/>
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="270dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            app:layout_constraintStart_toStartOf="@+id/frameCard"
-            app:layout_constraintEnd_toEndOf="@+id/frameCard"
-            app:layout_constraintTop_toBottomOf="@+id/cardTitle">
-        <TextView
-            android:id="@+id/cardDesc"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/orange"
-            android:fontFamily="@font/montserrat_regular"
-            android:textSize="20dp"
-            /></ScrollView>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-        <ImageButton
-            android:id="@+id/cardButtonAdd"
-            android:layout_width="170dp"
-            android:layout_height="40dp"
-            android:background="@drawable/basket_selector"
-            app:layout_constraintBottom_toBottomOf="@+id/frameCard"
-            app:layout_constraintStart_toStartOf="@+id/frameCard"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="15dp"/>
-        <ImageButton
-            android:id="@+id/cardButtonPlus"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/plus"
-            app:layout_constraintEnd_toStartOf="@+id/cardCount"
-            app:layout_constraintBottom_toBottomOf="@+id/cardButtonAdd"
-            app:layout_constraintTop_toTopOf="@+id/cardButtonAdd"
-            android:layout_marginEnd="20dp"
-            />
-        <ImageButton
-            android:id="@+id/cardButtonMinus"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/minus"
-            app:layout_constraintStart_toEndOf="@+id/cardCount"
-            app:layout_constraintBottom_toBottomOf="@+id/cardButtonAdd"
-            app:layout_constraintTop_toTopOf="@+id/cardButtonAdd"
-            android:layout_marginStart="20dp"
-            />
-        <TextView
-            android:id="@+id/cardCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textColor="@color/orange"
-            android:fontFamily="@font/montserrat_regular"
-            android:textSize="18dp"
-            app:layout_constraintBottom_toBottomOf="@+id/cardButtonAdd"
-            app:layout_constraintTop_toTopOf="@+id/cardButtonAdd"
-            app:layout_constraintEnd_toEndOf="@+id/frameCard"
-            android:layout_marginEnd="80dp"
-            />
-        <ImageView
-            android:id="@+id/cardAddToCart"
-            android:layout_width="335dp"
-            android:layout_height="92dp"
-            app:layout_constraintBottom_toTopOf="@+id/cardButtonAdd"
-            app:layout_constraintStart_toStartOf="@+id/frameCard"
-            app:layout_constraintEnd_toEndOf="@+id/frameCard"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/add"
-            android:alpha="0"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <ImageButton
+                    android:id="@+id/buttonBasket"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+
+                    android:background="@drawable/basket" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/buttonBasket"
+                    app:layout_constraintEnd_toEndOf="@id/buttonBasket"
+                    app:layout_constraintHorizontal_bias="0.75"
+
+                    app:layout_constraintStart_toStartOf="@id/buttonBasket"
+                    app:layout_constraintTop_toTopOf="@id/buttonBasket"
+                    app:layout_constraintVertical_bias="0.23">
+
+                    <TextView
+
+                        android:id="@+id/counterBasket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="0"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/buttonFav"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/fav" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
 
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/menuDelete"
-        android:layout_width="390dp"
-        android:layout_height="120dp"
+        android:layout_width="300dp"
+        android:layout_height="93dp"
         android:alpha="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
         <ImageView
-            android:layout_width="390dp"
-            android:layout_height="120dp"
+            android:layout_width="300dp"
+            android:layout_height="93dp"
             android:background="@drawable/back_for_questions"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -389,9 +133,9 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
-            android:layout_width="360dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="277dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="11dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -407,26 +151,18 @@
             android:orientation="horizontal">
             <ImageButton
                 android:id="@+id/menuDeleteButtonYes"
-                android:layout_width="64dp"
-                android:layout_height="35dp"
+                android:layout_width="49dp"
+                android:layout_height="27dp"
                 android:background="@drawable/yes_selector"/>
             <ImageButton
                 android:id="@+id/menuDeleteButtonNo"
-                android:layout_width="64dp"
-                android:layout_height="35dp"
+                android:layout_width="49dp"
+                android:layout_height="27dp"
                 android:background="@drawable/no_selector"/>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/slider"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/darkening"
@@ -442,4 +178,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
